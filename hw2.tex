@@ -37,7 +37,7 @@ p-value &= P_{H_{0}}\left\{\left\vert \frac{\hat{p}-\mu_{0}}{SE\left(\hat{p}\rig
 &= 2\Phi\left(-\left\vert \frac{.538-.5}{.025} \right\vert\right) = 2\Phi\left(-1.52\right) = 2\left(.0643\right)\\
 &= .1286
 \end{align*}
-\textbf{(d)}\\
+\textbf{(d)}
 \begin{align*}
 p-value &= P_{H_{0}}\left\{\frac{\hat{p}-\mu_{0}}{SE\left(\hat{p}\right)} > \frac{\hat{p}^{act}-\mu_{0}}{SE\left(\hat{p}^{act}\right)}\right\}\\
 &= \Phi\left(\frac{.038}{.025}\right) = \Phi\left(-1.52\right)\\
@@ -95,10 +95,38 @@ There is statistically significant evidence of Florida students performing diffe
 \textbf{(d)}\\
 \null\quad i. $9 \pm 1.96*(60/\sqrt{453}) = [3.475, 14.525]$\\
 \null\quad ii. Yes at 5\% significance, because difference of 0 is not within the 95\% confidence interval.\\
-\null\quad iii. We already have the statistics for when prep is administered and students do not take the test twice. \null\quad\null\quad Now, to compare to that effect and also to the two effects combined, isolate the effect of taking twice \null\quad\null\quad by having another large sample group take the test twice with no prep.\\
+\null\quad iii. We already have the statistics for when prep is administered and students do not take the test twice. \null\quad\null\quad Now, to compare to that effect and also to the two effects combined, isolate the effect of taking twice \null\quad\null\quad by having another large sample group take the test twice with no prep.
+
 \subsection{Exercise 3.17}
+\textbf{(a)}\\
+$(25.30-24.83) \pm 1.96\sqrt{12.09^{2}/2004 + 10.85^{2}/1594} = [-.281, 1.221]$\\
+\textbf{(b)}\\
+$(21.50-21.39) \pm 1.96\sqrt{9.99^{2}/1951 + 8.39^{2}/1368} = [-.518, .738]$\\
+\textbf{(c)}\\
+$(3.80-3.44) \pm 1.96\sqrt{.35^{2} + .35^{2}} = .36 \pm .97 = [-.61, 1.33]$
 
 \subsection{Exercise 3.18}
+\textbf{(a)}
+\begin{align*}
+E\left[\left(Y_{i} - \overline{Y}\right)^{2}\right] &= var\left(Y_{i} - \overline{Y}\right) - E\left[Y_{i} - \overline{Y}\right]^{2}\\
+&= var\left(Y_{i}\right) - 2cov\left(Y_{i}, \overline{Y}\right) + var\left(\overline{Y}\right) - 0^{2} \\
+&= var\left(Y_{i}\right) - 2cov\left(Y_{i}, \overline{Y}\right) + var\left(\overline{Y}\right) \square
+\end{align*}
+\textbf{(b)}
+\begin{align*}
+cov\left(\overline{Y}, Y_{i}\right) &= cov\left(\frac{1}{n}\sum_{j=1}^{n}, Y_{i}\right)\\
+&= cov\left(\frac{Y_{i}}{n}, Y_{i}\right)\\
+&= \frac{1}{n}cov\left(Y_{i}, Y_{i}\right) = \frac{\sigma_{Y}^{2}}{n}
+\end{align*}
+\textbf{(c)}
+\begin{align*}
+E\left(s_{y}^{2}\right) &= E\left(\frac{1}{n-1}\sum_{i=1}^{n}\left(Y_{i} - \overline{Y}\right)^{2}\right)\\
+&= \frac{1}{n-1}\sum_{i=1}^{n}E\left[\left(Y_{i} - \overline{Y}\right)^{2}\right]\\
+&= \frac{1}{n-1}\sum_{i=1}^{n}\left(var\left(Y_{i}\right) - 2cov\left(Y_{i}, \overline{Y}\right) + var\left(\overline{Y}\right)\right)\\
+&= \frac{1}{n-1}\sum_{i=1}^{n}\left(\sigma_{Y}^{2} - 2*\frac{\sigma_{Y}^{2}}{n} + \frac{\sigma_{Y}^{2}}{n}\right)\\
+&= \frac{1}{n-1}\sum_{i=1}^{n}\left(\frac{n-1}{n}\sigma_{Y}^{2}\right)\\
+&= \frac{1}{n-1}*n*\left(\frac{n-1}{n}\sigma_{Y}^{2}\right) = \sigma_{Y}^{2}
+\end{align*}
 
 \section{Problem 2}
 \textbf{(a)}\\

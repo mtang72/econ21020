@@ -2,7 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{changepage}
-\title{Homework 2}
+\title{Problem Set 2}
 \author{Michael Tang}
 \begin{document}
 \maketitle
@@ -11,9 +11,49 @@
 
 \section{Problem 1: Stock \& Watson}
 \subsection{Exercise 3.2}
+\textbf{(a)}\\
+$\overline{Y} = E\left[Y_{1},...,Y_{n}\right] = \hat{p}*1 + \left(1-\hat{p}\right)*0$\\
+$\overline{Y} = \hat{p}$\\
+\textbf{(b)}\\
+$E\left[\overline{Y}\right] = E\left[\hat{p}\right] = \frac{1}{n}\sum_{i=1}^{n}E\left(Y_{i}\right) = \frac{1}{n}\sum_{i=1}^{n}p = p$\\
+Therefore, $\hat{p}$ is an unbiased estimator of $p$.\\
+\textbf{(c)}\\
+$var\left(\hat{p}\right) = var\left(\overline{Y}\right) = var\left(\frac{1}{n}\sum_{i=1}^{n}Y_{i}\right) = \frac{1}{n^{2}}\sum_{i=1}^{n}var\left(Y_{i}\right)$\\
+$var\left(\hat{p}\right) = \frac{1}{n^{2}}\sum_{i=1}^{n}\sigma_{Y}^2$, $\sigma_{Y} = p\left(1-p\right)$ for Bernoulli rv.\\
+$var\left(\hat{p}\right) = \frac{p\left(1-p\right)}{n}$  $\square$
 \subsection{Exercise 3.3}
+\textbf{(a)}\\
+$\hat{p} = 215/400 = .538$\\
+\textbf{(b)}\\
+$SE\left(\hat{p}\right) = \sqrt{var\left(\hat{p}\right)} = \sqrt{\frac{\hat{p}\left(1-\hat{p}\right)}{n}} = \sqrt{\frac{.538*.462}{400}} = .025$\\
+\textbf{(c)}\\
+By the Central Limit Theorem, $\left\vert\frac{\hat{p}-\mu_{0}}{SE\left(\hat{p}\right)}\right\vert$ has approximate distribution $N\left(0,1\right)$.
+\begin{align*}
+p-value &= P_{H_{0}}\left\{\left\vert \frac{\hat{p}-\mu_{0}}{SE\left(\hat{p}\right)}\right\vert > \left\vert\frac{\hat{p}^{act}-\mu_{0}}{SE\left(\hat{p}^{act}\right)}\right\vert\right\}\\
+&= 2\Phi\left(-\left\vert \frac{.538-.5}{.025} \right\vert\right) = 2\Phi\left(-1.52\right) = 2\left(.0643\right)\\
+&= .1286
+\end{align*}
+\textbf{(d)}\\
+\begin{align*}
+p-value &= P_{H_{0}}\left\{\frac{\hat{p}-\mu_{0}}{SE\left(\hat{p}\right)} > \frac{\hat{p}^{act}-\mu_{0}}{SE\left(\hat{p}^{act}\right)}\right\}\\
+&= \Phi\left(\frac{.038}{.025}\right) = \Phi\left(-1.52\right)\\
+&= .0643
+\end{align*}
+\textbf{(e)}\\
+p-value of (d) is one half that of (c) because it only counts one direction of inequality and not two.\\
+\textbf{(f)}\\
+Depends on the significance level one wants to take. Assuming a significance level $\alpha = .05$, both p-values show that we do not have significant enough evidence to suggest that the incumbent is ahead of the challenger.
 \subsection{Exercise 3.4}
+\textbf{(a)}\\
+$95\%$ confidence for $p = \left\{\hat{p} \pm 1.96*SE\left(\hat{p}\right)\right\} = \left\{.538 \pm .049\right\} = \left\{.489, .587\right\}$\\
+\textbf{(b)}\\
+$99\%$ confidence for $p = \left\{.538 \pm 2.58*.025\right\} = \left\{.4735, .6025\right\}$\\
+\textbf{(c)}\\
+The interval in (b) is wider because to be able to capture the population fraction in a larger percentage of samples one has to expand the accepted range of values around the sample mean.\\
+\textbf{(d)}\\
+We cannot reject the null hypothesis at the $5\%$ significance level; see part (f) of Exercise 3.3.
 \subsection{Exercise 3.15}
+
 \subsection{Exercise 3.16}
 \subsection{Exercise 3.17}
 \subsection{Exercise 3.18}

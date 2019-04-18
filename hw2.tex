@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{changepage}
+\newcommand{\Lagr}{\mathcal{L}}
 \title{Problem Set 2}
 \author{Michael Tang}
 \begin{document}
@@ -23,7 +24,7 @@ Therefore, $\hat{p}$ is an unbiased estimator of $p$.\\
 \begin{align*}
 var\left(\hat{p}\right) &= var\left(\overline{Y}\right) = var\left(\frac{1}{n}\sum_{i=1}^{n}Y_{i}\right) = \frac{1}{n^{2}}\sum_{i=1}^{n}var\left(Y_{i}\right)\\
 &= \frac{1}{n^{2}}\sum_{i=1}^{n}\sigma_{Y}^2, \sigma_{Y} = p\left(1-p\right) \text{for Bernoulli rv.}\\
-&= \frac{p\left(1-p\right)}{n}  \square
+&= \frac{p\left(1-p\right)}{n}  \; \square
 \end{align*}
 \subsection{Exercise 3.3}
 \textbf{(a)}\\
@@ -67,7 +68,7 @@ var\left(\hat{p}_{b}\right) &= \frac{\sigma_{b}}{n_{a}} = \frac{p_{b}\left(1-p_{
 \textbf{(b)}\\
 Since samples are independent:
 \begin{equation*}
-var\left(\hat{p}_{a} - \hat{p}_{b}\right) = var\left(\hat{p}_{a}\right) - var\left(\hat{p}_{b}\right) = \frac{p_{a}\left(1-p_{a}\right)}{n_{a}} - \frac{p_{b}\left(1-p_{b}\right)}{n_{b}} \square
+var\left(\hat{p}_{a} - \hat{p}_{b}\right) = var\left(\hat{p}_{a}\right) - var\left(\hat{p}_{b}\right) = \frac{p_{a}\left(1-p_{a}\right)}{n_{a}} - \frac{p_{b}\left(1-p_{b}\right)}{n_{b}} \; \square
 \end{equation*}
 \textbf{(c)}
 \begin{align*}
@@ -110,7 +111,7 @@ $(3.80-3.44) \pm 1.96\sqrt{.35^{2} + .35^{2}} = .36 \pm .97 = [-.61, 1.33]$
 \begin{align*}
 E\left[\left(Y_{i} - \overline{Y}\right)^{2}\right] &= var\left(Y_{i} - \overline{Y}\right) - E\left[Y_{i} - \overline{Y}\right]^{2}\\
 &= var\left(Y_{i}\right) - 2cov\left(Y_{i}, \overline{Y}\right) + var\left(\overline{Y}\right) - 0^{2} \\
-&= var\left(Y_{i}\right) - 2cov\left(Y_{i}, \overline{Y}\right) + var\left(\overline{Y}\right) \square
+&= var\left(Y_{i}\right) - 2cov\left(Y_{i}, \overline{Y}\right) + var\left(\overline{Y}\right) \; \square
 \end{align*}
 \textbf{(b)}
 \begin{align*}
@@ -130,25 +131,69 @@ E\left(s_{y}^{2}\right) &= E\left(\frac{1}{n-1}\sum_{i=1}^{n}\left(Y_{i} - \over
 
 \section{Problem 2}
 \textbf{(a)}\\
+By the law of iterated expectations:\\
+$E[U] = E[E[U \vert X]] = E[1] = 1$\\
 \textbf{(b)}\\
+Again by law of iterated expectations:\\
+$E[XU] = E[E[XU \vert X]] = E[XE[U \vert X]] = E[X] = 2$\\ 
 \textbf{(c)}\\
+$cov[X,U] = \sigma_{XU} = E[XU] - E[X]E[U] = 2 - 2 = 0$\\
 \textbf{(d)}\\
+Yes, because $E[U] = E[U \vert X]$.\\
 \textbf{(e)}\\
+Yes, because their covariance is 0.\\
 \textbf{(f)}\\
+No, I do not have enough information to determine independence. I do not have the probability distributions of either random variable.
 
 \section{Problem 3}
-\textbf{(a)}\\
-\textbf{(b)}\\
+\textbf{(a)}
+\begin{align*}
+\hat{\theta}_{n} \text{ unbiased estimator of } E[X] &\Rightarrow E[\hat{\theta}_{n}] = E[X]\\
+E[\hat{\theta}_{n}] &= \sum_{i=1}^{n}a_{i}E[X_{i}] = E[X]\\
+E[X]\sum_{i=1}^{n}a_{i} &= E[X]\\
+\sum_{i=1}^{n}a_{i} &= 1 \; \square
+\end{align*}
+\textbf{(b)}
+\begin{align*}
+var[\hat{\theta}_{n}] &= \sum_{i=1}^{n}a_{i}^{2}var[X_{i}] \text{  Eqn (2.31)}\\
+&= var[X]\sum_{i=1}^{n}a_{i}^{2} \; \square
+\end{align*}
 \textbf{(c)}\\
+Since $var[X]$ is not what we are adjusting here, we want to find:
+\begin{align*}
+&\min_{a_{1},...,a_{n}}\sum_{i}^{n}a_{i}^{2} \text{ such that } \sum_{i}^{n}a_{i} = 1\\
+&\min_{a_{1},...,a_{n}}\Lagr= a_{1}^{2}+...+a_{n}^{2} + \lambda\left(1-a_{1}-...-a_{n}\right)\\
+&\text{FOCs:}\\
+&[a_{i}] 2a_{i} - \lambda = 0\\
+&[\lambda] 1-a_{1}-...-a_{n} = 0 \Rightarrow na_{i} = 1 \Rightarrow a_{i} = 1/n
+\end{align*}
+Setting all $a_{i} = 1/n$ is optimal.
 
 \section{Problem 4}
-\textbf{(a)}\\
+\textbf{(a)}
+\begin{align*}
+\overline{Z}_{n} &= \frac{1}{n}\sum_{i=1}^{n}\left(a+bX_{i}\right)\\
+&= a+\frac{b}{n}\sum_{i=1}^{n}X_{i} 
+&= a+b\overline{X}_{n} \; \square\\
+\hat{\sigma}_{Z}^{2} &= \frac{1}{n-1}\sum_{i=1}^{n}\left(Z_{i}-\overline{Z}\right)^{2}\\ 
+&= \frac{1}{n-1}\sum_{i=1}^{n}\left(a+bX_{i}-a+b\overline{X}_{n}\right)^{2}\\
+&= \frac{b^{2}}{n-1}\sum_{i=1}^{n}\left(X_{i}-\overline{X}_{n}\right)^{2}\\
+&= b^{2}\hat{\sigma}_{x}^{2} \; \square
+\end{align*}
 \textbf{(b)}\\
+Recall that $\overline{X}_{n}$ is an unbiased estimator of $X$.\\
+$E\left[\overline{Z}_{n}\right] = E\left[a+b\overline{X}_{n}\right] = a+bE\left[\overline{X}_{n}\right] = a+bE[X] = E[a+bX] = E[Z] \; \square$\\
 \textbf{(c)}\\
+By the Law of Large Numbers, $\overline{X}_{n}$ is a consistent estimator of $E[X]$.\\
+By the Continuous Mapping Theorem:\\
+$\overline{Z}_{n} = a+b\overline{X}_{n} \Rightarrow a + bE[X] = E[a+bX] = E[Z]$ where $\Rightarrow$ here means convergence in probability.\\
+$\therefore \overline{Z}_{n}$ is a consistent estimator of $E[Z]$.
 
 \section{Problem 5}
 \textbf{(a)}\\
+$E\left[\overline{X}_{n}\overline{Y}_{n}\right] = E\left[\overline{X}_{n}\right]E\left[\overline{Y}_{n}\right] + cov\left(\overline{X}_{n},\overline{Y}_{n}\right) = E[X]E[Y] + cov\left(\overline{X}_{n},\overline{Y}_{n}\right)$\\
+From this, estimator is unbiased iff $cov\left(\overline{X}_{n},\overline{Y}_{n}\right) = 0$ which is only true when $cov(X,Y)=0$ which we do not know. We cannot conclude whether $\overline{X}_{n}\overline{Y}_{n}$ is an unbiased estimator of $E[X]E[Y]$.\\
 \textbf{(b)}\\
-
+By the Law of Large Numbers, $\overline{X}_{n}$ converges probabilistically to $E[X]$ and $\overline{Y}_{n}$ likewise to $E[Y]$. Then, by the Continuous Mapping Theorem, $\overline{X}_{n}\overline{Y}_{n}$ converges probabilistically to $E[X]E[Y]$ and is a consistent estimator of it.
 \end{adjustwidth}
 \end{document}

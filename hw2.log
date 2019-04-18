@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  17 APR 2019 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  17 APR 2019 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,6 +9,16 @@ LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2a Standard LaTeX option (flush left equations)
+\mathindent=\dimen102
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
@@ -22,7 +32,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
-\bibindent=\dimen102
+\bibindent=\dimen103
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
@@ -35,11 +45,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
-\ex@=\dimen103
+\ex@=\dimen104
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
+\pmbraise@=\dimen105
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
@@ -56,7 +66,7 @@ LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen105
+\big@size=\dimen106
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count93
@@ -69,12 +79,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \column@=\count98
 \maxfields@=\count99
 \andhelp@=\toks16
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
 \@envbody=\toks17
 \multlinegap=\skip44
 \multlinetaggap=\skip45
@@ -120,60 +130,66 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
-
- []
-
-[1
+) [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 62--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--73
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
+Underfull \hbox (badness 10000) in paragraph at lines 89--99
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 103--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 
  []
 
-[3] (./hw2.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+
+ []
+
+[4] [5] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 1181 strings out of 492649
- 13441 string characters out of 6129622
- 78882 words of memory out of 5000000
- 5097 multiletter control sequences out of 15000+600000
+ 1187 strings out of 492649
+ 13605 string characters out of 6129622
+ 81940 words of memory out of 5000000
+ 5100 multiletter control sequences out of 15000+600000
  11503 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,13n,27p,233b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
-.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
-b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-
-Output written on hw2.pdf (3 pages, 135462 bytes).
+ 27i,13n,27p,346b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pf
+b>
+Output written on hw2.pdf (5 pages, 150076 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

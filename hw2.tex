@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[fleqn]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{changepage}
@@ -11,16 +11,20 @@
 
 \section{Problem 1: Stock \& Watson}
 \subsection{Exercise 3.2}
-\textbf{(a)}\\
-$\overline{Y} = E\left[Y_{1},...,Y_{n}\right] = \hat{p}*1 + \left(1-\hat{p}\right)*0$\\
-$\overline{Y} = \hat{p}$\\
+\textbf{(a)}
+\begin{align*}
+\overline{Y} &= E\left[Y_{1},...,Y_{n}\right] = \hat{p}*1 + \left(1-\hat{p}\right)*0\\
+&= \hat{p}
+\end{align*}
 \textbf{(b)}\\
 $E\left[\overline{Y}\right] = E\left[\hat{p}\right] = \frac{1}{n}\sum_{i=1}^{n}E\left(Y_{i}\right) = \frac{1}{n}\sum_{i=1}^{n}p = p$\\
 Therefore, $\hat{p}$ is an unbiased estimator of $p$.\\
-\textbf{(c)}\\
-$var\left(\hat{p}\right) = var\left(\overline{Y}\right) = var\left(\frac{1}{n}\sum_{i=1}^{n}Y_{i}\right) = \frac{1}{n^{2}}\sum_{i=1}^{n}var\left(Y_{i}\right)$\\
-$var\left(\hat{p}\right) = \frac{1}{n^{2}}\sum_{i=1}^{n}\sigma_{Y}^2$, $\sigma_{Y} = p\left(1-p\right)$ for Bernoulli rv.\\
-$var\left(\hat{p}\right) = \frac{p\left(1-p\right)}{n}$  $\square$
+\textbf{(c)}
+\begin{align*}
+var\left(\hat{p}\right) &= var\left(\overline{Y}\right) = var\left(\frac{1}{n}\sum_{i=1}^{n}Y_{i}\right) = \frac{1}{n^{2}}\sum_{i=1}^{n}var\left(Y_{i}\right)\\
+&= \frac{1}{n^{2}}\sum_{i=1}^{n}\sigma_{Y}^2, \sigma_{Y} = p\left(1-p\right) \text{for Bernoulli rv.}\\
+&= \frac{p\left(1-p\right)}{n}  \square
+\end{align*}
 \subsection{Exercise 3.3}
 \textbf{(a)}\\
 $\hat{p} = 215/400 = .538$\\
@@ -53,9 +57,47 @@ The interval in (b) is wider because to be able to capture the population fracti
 \textbf{(d)}\\
 We cannot reject the null hypothesis at the $5\%$ significance level; see part (f) of Exercise 3.3.
 \subsection{Exercise 3.15}
-
+\textbf{(a)}
+\begin{align*}
+E\left(\hat{p}_{a}\right) &= \frac{1}{n_{a}}\sum_{i=1}^{n_{a}}E\left(Y_{i}\right) = \frac{1}{n_{a}}\sum_{i=1}^{n_{a}}p_{a} = p_{a}\\
+var\left(\hat{p}_{a}\right) &= \frac{1}{n_{a}}\sum_{i=1}^{n_{a}}var\left(Y_{i}\right) = \frac{\sigma_{a}}{n_{a}} = \frac{p_{a}\left(1-p_{a}\right)}{n_{a}}\\
+E\left(\hat{p}_{b}\right) &= \frac{1}{n_{b}}\sum_{i=1}^{n_{b}}p_{b} = p_{b}\\
+var\left(\hat{p}_{b}\right) &= \frac{\sigma_{b}}{n_{a}} = \frac{p_{b}\left(1-p_{b}\right)}{n_{b}}
+\end{align*}
+\textbf{(b)}\\
+Since samples are independent:
+\begin{equation*}
+var\left(\hat{p}_{a} - \hat{p}_{b}\right) = var\left(\hat{p}_{a}\right) - var\left(\hat{p}_{b}\right) = \frac{p_{a}\left(1-p_{a}\right)}{n_{a}} - \frac{p_{b}\left(1-p_{b}\right)}{n_{b}} \square
+\end{equation*}
+\textbf{(c)}
+\begin{align*}
+\text{95\% confidence for $p_{a}-p_{b}$} &= \left(\hat{p}_{a}-\hat{p}_{b}\right) \pm 1.96*SE\left(\hat{p}_{a}-\hat{p}_{b}\right)\\
+&= \left(\hat{p}_{a}-\hat{p}_{b}\right) \pm 1.96\sqrt{SE\left(\hat{p}_{a}\right)^{2} - SE\left(\hat{p}_{b}\right)^{2}}\\
+&= \left(\hat{p}_{a}-\hat{p}_{b}\right) \pm 1.96\sqrt{\frac{\hat{p}_{a}\left(1-\hat{p}_{a}\right)}{n_{a}} + \frac{\hat{p}_{b}\left(1-\hat{p}_{b}\right)}{n_{b}}}
+\end{align*}
+For 90\% confidence critical value = 2.58, so interval:\\
+$\left(\hat{p}_{a}-\hat{p}_{b}\right) \pm 2.58\sqrt{\frac{\hat{p}_{a}\left(1-\hat{p}_{a}\right)}{n_{a}} + \frac{\hat{p}_{b}\left(1-\hat{p}_{b}\right)}{n_{b}}}$\\
+\textbf{(d)}\\
+$\left(.859-.374\right) \pm 1.96\sqrt{\frac{.859*.141}{5801} + \frac{.374*.626}{4249}} = [.468, .502]$
 \subsection{Exercise 3.16}
+\textbf{(a)}\\
+$\mu_{Y} = 1000$ is the mean score for the population, and $\overline{Y} = 1013$ is the sample mean.
+\begin{align*}
+SE\left(\overline{Y}\right) &= \frac{s}{\sqrt{n}} = \frac{108}{\sqrt{453}} = 5.074\\
+\text{95\% interval} &= \overline{Y} \pm 1.96*SE\left(\left(\overline{Y}\right)\right)\\
+&= 1013 \pm 1.96*5.074 = [1003.054, 1022.946]
+\end{align*}
+\textbf{(b)}\\
+There is statistically significant evidence of Florida students performing differently than other US students at 5\% significance, because the population mean of 1000 is outside the 95\% confidence interval.\\
+\textbf{(c)}\\
+\null\quad i. $(\overline{Y}_{p}-\overline{Y}) \pm 1.96*SE(\overline{Y}_{p}-\overline{Y}) = (1019-1013) \pm 1.96*\sqrt{95^{2}/503 + 108^{2}/453} = [-6.955, 18.955]$\\
+\null\quad ii. Not at 5\% significance, because a difference of 0 between prepped and non-prepped students is within the 95\% confidence interval.\\
+\textbf{(d)}\\
+\null\quad i. $9 \pm 1.96*(60/\sqrt{453}) = [3.475, 14.525]$\\
+\null\quad ii. Yes at 5\% significance, because difference of 0 is not within the 95\% confidence interval.\\
+\null\quad iii. We already have the statistics for when prep is administered and students do not take the test twice. \null\quad\null\quad Now, to compare to that effect and also to the two effects combined, isolate the effect of taking twice \null\quad\null\quad by having another large sample group take the test twice with no prep.\\
 \subsection{Exercise 3.17}
+
 \subsection{Exercise 3.18}
 
 \section{Problem 2}
